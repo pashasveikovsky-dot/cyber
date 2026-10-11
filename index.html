@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Название клуба] — Твоя территория доминирования</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Шапка -->
+<header class="header">
+    <div class="container header__inner">
+        <a href="#" class="logo">[ЛОГОТИП]</a>
+        <nav class="nav">
+            <a href="#features" class="nav__link">Зоны отдыха</a>
+            <a href="#specs" class="nav__link">Железо</a>
+            <a href="#tournaments" class="nav__link">Турниры</a>
+            <a href="#booking" class="nav__link button button--outline">Бронировать ПК</a>
+            <a href="#profile" class="nav__link button button--primary">Мой профиль</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Главный экран -->
+<section class="hero">
+    <div class="hero__content container">
+        <h1 class="hero__title"> CyberVortex.</h1>
+        <p class="hero__subtitle">Бронируй топовое железо (RTX 5090 Ti), создавай профиль, отслеживай ачивки и выигрывай призы в турнирах 1 на 1.</p>
+        
+        <div class="hero__cta">
+            <button id="bookBtn" class="button button--primary">🎖️ Участвовать в турнире / Забронировать ПК</button>
+        </div>
+
+        <div class="hero__badge">
+            🎁 Бесплатно первые 3 дня | Мини-бар за наш счет
+        </div>
+    </div>
+</section>
+
+<!-- Зоны отдыха -->
+<section id="features" class="features">
+    <div class="container">
+        <h2 class="section-title">Твоя приватная территория</h2>
+        <div class="features__grid">
+            <div class="feature-card">
+                <div class="feature-icon">🛋️</div>
+                <h3>Комнаты до 6 человек</h3>
+                <p>Акустический поролон отсекает шум. Мягкие пуфики для общения.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💡</div>
+                <h3>Правильный свет</h3>
+                <p>Никакого слепящего света. Только диодные ленты и ночники.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🥤</div>
+                <h3>Мини-бар</h3>
+                <p>Каждые 3 часа бесплатно. Кола, энергетики, Байкал, Дюшес, пицца.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Железо -->
+<section id="specs" class="specs">
+    <div class="container">
+        <h2 class="section-title">Максимальный FPS</h2>
+        <p class="specs__intro">Конфигурация каждого нашего ПК:</p>
+        <div class="specs__table-container">
+            <table class="specs__table">
+                <thead><tr><th>Компонент</th><th>Модель</th></tr></thead>
+                <tbody>
+                    <tr><td>Видеокарта</td><td>NVIDIA GeForce RTX 5090 Ti</td></tr>
+                    <tr><td>Процессор</td><td>AMD RYZEN 9800X3D</td></tr>
+                    <tr><td>Оперативная память</td><td>64 ГБ DDR5</td></tr>
+                    <tr><td>Накопитель</td><td>SSD NVMe 2 ТБ</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- Профиль и достижения -->
+<section id="profile" class="achievements">
+    <div class="container">
+        <h2 class="section-title">Создай свой цифровой след</h2>
+        <p>Каждый визит приносит очки опыта. Привяжи Steam или Epic Games к профилю через приложение.</p>
+        <div class="achiev__grid">
+            <div class="achiev__card">
+                <h3>Единый профиль</h3>
+                <p>Управляй бронью, балансом абонемента и историей игр в одном месте.</p>
+            </div>
+            <div class="achiev__card">
+                <h3>Система достижений</h3>
+                <p>Получай значки за часы игры и победы. Открывай эксклюзивные роли в Discord.</p>
+            </div>
+            <div class="achiev__card">
+                <h3>Лига призов</h3>
+                <p>Чем выше твой ранг в клубе, тем больше шансов забрать главный лут на турнирах.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Турниры -->
+<section id="tournaments" class="tournaments">
+    <div class="container">
+        <h2 class="section-title">Турнирная Лига: Короли Арены</h2>
+        <p>Регистрация открыта! Игра 1 на 1 каждые два месяца.</p>
+        
+        <div id="countdownTimer" class="timer">
+            До старта регистрации:
+            <span id="days">00</span>д 
+            <span id="hours">00</span>ч 
+            <span id="minutes">00</span>м 
+            <span id="seconds">00</span>с
+        </div>
+
+        <div class="prizes__grid">
+            <div class="prize__card prize--gold">
+                <h3>🥇 1 место</h3>
+                <img src="https://via.placeholder.com/150x200/FFD700/000000?text=iPad+Pro+13" alt="iPad Pro">
+                <p>iPad Pro 13" 1TB + Кубок клуба</p>
+            </div>
+            <div class="prize__card prize--silver">
+                <h3>🥈 2 место</h3>
+                <img src="https://via.placeholder.com/150x200/C0C0C0/000000?text=AirPods+Max" alt="AirPods Max">
+                <p>AirPods Max (Белый цвет)</p>
+            </div>
+            <div class="prize__card prize--bronze">
+                <h3>🥉 3 место</h3>
+                <div class="icon-prize">⏱️</div>
+                <p>2 часа бесплатной игры</p>
+            </div>
+            <div class="prize__card consolation">
+                <h3>4–10 место</h3>
+                <div class="icon-prize">🍕</div>
+                <p>Любая пицца из мини-бара бесплатно</p>
+            </div>
+        </div>
+        <button class="button button--primary button--large">Зарегистрировать слот</button>
+    </div>
+</section>
+
+<!-- Бронирование -->
+<section id="booking" class="booking">
+    <div class="container">
+        <h2 class="section-title">Интерактивная карта клуба</h2>
+        <p>Выбери свободный компьютер и комнату. Зеленый — свободно, Серый — занято.</p>
+        <div class="map-container">
+            <!-- Схематичная карта комнат -->
+            <div class="room room--alpha">
+                <h4>Комната Alpha (VIP)</h4>
+                <div class="pc-grid">
+                    <div class="pc-slot free" data-id="A1"><img src="assets/images/pc-icon.png" alt="PC"> A1</div>
+                    <div class="pc-slot occupied"><img src="assets/images/pc-icon.png" alt="PC"> A2</div>
+                    <div class="pc-slot free" data-id="A3"><img src="assets/images/pc-icon.png" alt="PC"> A3</div>
+                    <div class="pc-slot free" data-id="A4"><img src="assets/images/pc-icon.png" alt="PC"> A4</div>
+                </div>
+            </div>
+            <div class="room room--beta">
+                <h4>Комната Beta</h4>
+                <div class="pc-grid">
+                    <div class="pc-slot occupied"><img src="assets/images/pc-icon.png" alt="PC"> B1</div>
+                    <div class="pc-slot free" data-id="B2"><img src="assets/images/pc-icon.png" alt="PC"> B2</div>
+                    <div class="pc-slot free" data-id="B3"><img src="assets/images/pc-icon.png" alt="PC"> B3</div>
+                    <div class="pc-slot maintenance"><img src="assets/images/pc-icon.png" alt="PC"> B4</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Модальное окно выбора времени -->
+        <div id="bookingModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3>Забронировать станцию <span id="selectedPC"></span></h3>
+                <label for="dateSelect">Дата:</label>
+                <input type="date" id="dateSelect">
+                <label for="timeSelect">Время (слот 3 часа):</label>
+                <select id="timeSelect">
+                    <option>12:00 - 15:00</option>
+                    <option>15:00 - 18:00</option>
+                    <option>18:00 - 21:00</option>
+                    <option>21:00 - 00:00</option>
+                </select>
+                <button class="button button--primary confirm-book">Подтвердить бронь</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Футер -->
+<footer class="footer">
+    <div class="container footer__inner">
+        <div class="footer__col">
+            <a href="#" class="logo logo--white">[ЛОГОТИП]</a>
+            <p>&copy; 2026 CyberVortex. Работаем круглосуточно.</p>
+        </div>
+        <div class="footer__col">
+            <a href="#tournaments" class="footer__link">Турниры и призы</a>
+            <a href="#profile" class="footer__link">Профиль и ачивки</a>
+            <a href="#booking" class="footer__link">Карта бронирования</a>
+        </div>
+        <div class="footer__col">
+            <h4>Контакты</h4>
+            <p>г. Москва, ул. васильева, д. 25</p>
+            <p>Тел: +7 989 573-00-85</p>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
