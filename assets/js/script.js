@@ -315,23 +315,36 @@ scene.backgroundNode = tsl.Fn(() => {
   const c = tsl.mix(tsl.color(0, 1, 0.75).mul(0.1), tsl.color(0, 0, 0), f);
   return c;
 })();
-let camera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 0.1, 100);
-    camera.position.set(1, 0.25, 1).setLength(10);
-let renderer = new THREE.WebGPURenderer({ antialias: true, forceWebGL: true });
-    renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
+const hero = document.querySelector('.hero');
+
+let camera = new THREE.PerspectiveCamera(
+    45,
+    hero.clientWidth / hero.clientHeight,
+    0.1,
+    100
+);
+camera.position.set(1, 0.25, 1).setLength(10);
+
+let renderer = new THREE.WebGPURenderer({
+    antialias: true,
+    forceWebGL: true
+});
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.setSize(hero.clientWidth, hero.clientHeight);
+
+// Canvas теперь находится в первом экране, а не после футера.
+hero.prepend(renderer.domElement);
 
 await renderer.init();
 
-window.addEventListener("resize", () => {
-  camera.aspect = innerWidth / innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(innerWidth, innerHeight);
-})
+window.addEventListener('resize', () => {
+    const width = hero.clientWidth;
+    const height = hero.clientHeight;
 
-let controls = new OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true;
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+    renderer.setSize(width, height);
+});
 
 let light = new THREE.DirectionalLight(0xffffff, Math.PI);
 scene.add(light, new THREE.AmbientLight(0xffffff, Math.PI * 0.5));
